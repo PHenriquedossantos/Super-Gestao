@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PrincipalController@store')->name('site.index');
-Route::get('/contato', 'ContatoController@store')->name('site.contato');
+Route::get('/contato', 'ContatoController@contato')->name('site.contato');
 Route::post('/contato', 'ContatoController@store')->name('site.contato');
 Route::get('/sobre', 'SobreController@store')->name('site.sobre-nos');
 // Rotas para login
