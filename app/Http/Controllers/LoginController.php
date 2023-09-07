@@ -9,7 +9,12 @@ class LoginController extends Controller
 {
     public function index(Request $request) {
 
-        $erro = $request->get('erro');
+        $erro = '';
+
+        if($request->get('erro')){
+            $erro = 'Usuário e ou senha não existe';
+        }
+
         return view('site.login', ['titulo' => 'login', 'erro'=> $erro]);
     }
 
@@ -35,7 +40,12 @@ class LoginController extends Controller
         $usuario = $user->where('email', $email)->where('password', $password)->get()->first();
         
         if(isset($usuario->name)){
-            echo "Usuario existe";
+            session_start();
+            $_SESSION['nome'] = $usuario->name;
+            $_SESSION['email'] = $usuario->email;
+
+            
+
         } else{
             return redirect()->route('site.login', ['erro' => 1]);
         }

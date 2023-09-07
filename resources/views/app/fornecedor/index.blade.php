@@ -10,15 +10,15 @@
 
     @forelse ($fornecedores as $indice => $fornecedor)
 
-        Fornecedor: {{ $fornecedores[$i]['nome'] }}
+        Fornecedor: {{ $fornecedores[$indice]['nome'] }}
         <br>
-        Status: {{ $fornecedores[$i]['status'] }}
+        Status: {{ $fornecedores[$indice]['status'] }}
         <br>
-        CNPJ: {{ $fornecedores[$i]['CNPJ'] ?? 'CNPJ NÃO INFORMADO' }}
+        CNPJ: {{ $fornecedores[$indice]['CNPJ'] ?? 'CNPJ NÃO INFORMADO' }}
         <br>
-        Telefone: {{ $fornecedores[$i]['telefone'] ?? ''}}
+        Telefone: {{ $fornecedores[$indice]['telefone'] ?? ''}}
         <br>
-        DDD: {{$fornecedores[$i]['ddd'] ?? ''}}
+        DDD: {{$fornecedores[$indice]['ddd'] ?? ''}}
         <hr>
     @empty
         não existem fornecedores cadastrados
