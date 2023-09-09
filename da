@@ -1,0 +1,59 @@
+[33mcommit 29c65acd29596940d2b1b0a13f984201633ae888[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Thu Sep 7 13:40:43 2023 -0300
+
+    Altera middleware
+
+[33mcommit 26ba52570eb40dbea054272e9b58ed909834fbaa[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Sat Sep 2 16:03:51 2023 -0300
+
+    Cria middleware para rota \ e rota \contato
+
+[33mcommit 612b08b4e51956ba9b0c71c3189b6ce62db6e342[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Sat Sep 2 14:39:39 2023 -0300
+
+    Refatora mensagens de validacao do ContatoController.php
+
+[33mcommit 1970bf914feb6be4a85a80ee8cb14f9ae79b9828[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Sat Sep 2 14:17:48 2023 -0300
+
+    Cria condicao de erros de validacao
+
+[33mcommit 741c39255fcc39e4cbb8c40359c8c0e3fc771961[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Wed Aug 30 21:00:03 2023 -0300
+
+    Controller Sitecontato funcionando 100%
+
+[33mcommit 88fd2bb76951eda4167746bce8bd94a2adfd960a[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Wed Aug 30 20:48:15 2023 -0300
+
+    Cria validacao para email no controller ContatoController
+
+[33mcommit 15516260eb5d9f7b9b08a4f2f3286f448e57782e[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Wed Aug 30 20:44:03 2023 -0300
+
+    Cria coluna motivo_contatos_id, migra os dados de motivo_contato para motivo_contatos_id, aplica a fk em motivo_contatos_id apontando para a coluna id da tabela motivo_contatos e por fim remove a coluna motivo_contato
+
+[33mcommit 0c1e62287dc0126d6e18101159439070f674cd48[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Wed Aug 30 20:11:15 2023 -0300
+
+    atualiza seed motivo_contato no ContatoController.php
+
+[33mcommit c2102f917f807a6ac5c5c11619a98aea47ac69c5[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Wed Aug 30 20:09:12 2023 -0300
+
+    Cria seed motivo_contato
+
+[33mcommit 9fe080a75fc59fc7bb67ab06b4127394a371918d[m
+Author: Henrique <henrique.ph935@gmail.com>
+Date:   Sun Aug 27 16:16:21 2023 -0300
+
+    Cria banco de dados mais 3 pages
