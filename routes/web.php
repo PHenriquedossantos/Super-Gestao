@@ -7,11 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PrincipalController@store')->name('site.index')->middleware('log.acesso');
-
 Route::get('/contato', 'ContatoController@contato')->name('site.contato');
-
 Route::post('/contato', 'ContatoController@store')->name('site.contato');
-
 Route::get('/sobre', 'SobreController@store')->name('site.sobre-nos');
 // Rotas para login
 Route::get('/login/{erro?}', 'LoginController@index')->name('site.login');
@@ -24,6 +21,8 @@ Route::middleware('autenticacao:padrao, visitante')->prefix('/app')->group(funct
     Route::get('/cliente', 'ClienteController@index')->name('app.cliente');
     Route::get('/fornecedor', 'FornecedorController@index')->name('app.fornecedor');
     Route::post('/fornecedor/listar', 'FornecedorController@listar')->name('app.fornecedor.listar');
+    Route::get('/fornecedor/adicionar', 'FornecedorController@adicionar')->name('app.fornecedor.adicionar');
+    Route::post('/fornecedor/adicionar', 'FornecedorController@adicionar')->name('app.fornecedor.adicionar');
     Route::get('/produto', 'ProdutoController@index')->name('app.produto');
 });
 

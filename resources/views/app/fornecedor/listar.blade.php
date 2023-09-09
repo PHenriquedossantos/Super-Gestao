@@ -10,7 +10,7 @@
 
         <div class="menu">
             <ul>
-                <li><a href="">Novo</a></li>
+                <li><a href="{{ route('app.fornecedor.adicionar') }}">Novo</a></li>
                 <li><a href="">Consulta</a></li>
             </ul>
         </div>
