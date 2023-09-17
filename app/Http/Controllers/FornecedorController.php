@@ -12,7 +12,7 @@ class FornecedorController extends Controller
     }
 
     public function listar(Request $request) {
-
+        dd($request->all());
         
         $fornecedores = Fornecedor::where('nome', 'like', '%'.$request->input('nome').'%')
             ->where('site', 'like', '%'.$request->input('site').'%')
@@ -25,7 +25,8 @@ class FornecedorController extends Controller
 
     public function adicionar(Request $request){
 
-        if($request->input('_token') != ''){
+        //inclusao
+        if($request->input('_token') != '' && $request->input('id' == '')){
             $regras = [
                 'nome' => 'required|min:3|max:40',
                 'site' => 'required',
@@ -47,6 +48,25 @@ class FornecedorController extends Controller
             $fornecedor = new Fornecedor();
             $fornecedor->create($request->all());
         }
+        //edicao
+        if($request->input('_token') != '' && $request->input('id') != ''){
+            $fornecedor = Fornecedor::find($request->input('id'));
+            $update = $fornecedor->update($request->all());
+            if($update) {
+                echo 'Update realizado com sucesso.';
+            }else {
+                echo 'Update apresentou erro.';
+            }
+            return redirect()->route('app.fornecedor.editar', ['id' => $request->input('id')]);
+        }
+
         return view('app.fornecedor.adicionar');
+    }
+
+    public function editar($id){
+        $fornecedor = Fornecedor::find($id);
+
+        return view('app.fornecedor.adicionar', ['fornecedor' => $fornecedor]);
+
     }
 }
